@@ -1,7 +1,11 @@
+import PixelatedCanvasDemo from "@/components/pixelated-canvas-demo";
+
 export default function Home() {
   return (
     <main>
-      {/* Add your page content here */}
+      <div className="flex justify-end">
+        <PixelatedCanvasDemo />
+      </div>
     </main>
   );
 }
