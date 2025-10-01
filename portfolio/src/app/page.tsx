@@ -1,11 +1,9 @@
-import PixelatedCanvasDemo from "@/components/pixelated-canvas-demo";
+import TextHoverEffectDemo from "@/components/text-hover-effect-demo";
 
 export default function Home() {
   return (
-    <main>
-      <div className="flex justify-end">
-        <PixelatedCanvasDemo />
-      </div>
+    <main className="flex min-h-screen flex-col items-center justify-center bg-black">
+      <TextHoverEffectDemo />
     </main>
   );
 }
