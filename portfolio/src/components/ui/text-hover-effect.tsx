@@ -16,7 +16,7 @@ export const TextHoverEffect = ({
   const [maskPosition, setMaskPosition] = useState({ cx: "50%", cy: "50%" });
 
   useEffect(() => {
-    if (svgRef.current && cursor.x !== null && cursor.y !== null) {
+    if (svgRef.current && cursor.x && cursor.y) {
       const svgRect = svgRef.current.getBoundingClientRect();
       const cxPercentage = ((cursor.x - svgRect.left) / svgRect.width) * 100;
       const cyPercentage = ((cursor.y - svgRect.top) / svgRect.height) * 100;
@@ -32,7 +32,7 @@ export const TextHoverEffect = ({
       ref={svgRef}
       width="100%"
       height="100%"
-      viewBox="0 0 300 100"
+      viewBox="0 0 1200 150"
       xmlns="http://www.w3.org/2000/svg"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -40,13 +40,7 @@ export const TextHoverEffect = ({
       className="select-none"
     >
       <defs>
-        <linearGradient
-          id="textGradient"
-          gradientUnits="userSpaceOnUse"
-          cx="50%"
-          cy="50%"
-          r="25%"
-        >
+        <linearGradient id="textGradient" gradientUnits="userSpaceOnUse">
           {hovered && (
             <>
               <stop offset="0%" stopColor="#eab308" />
@@ -64,11 +58,12 @@ export const TextHoverEffect = ({
           r="20%"
           initial={{ cx: "50%", cy: "50%" }}
           animate={maskPosition}
-          transition={{ duration: duration ?? 0, ease: "easeOut" }}
+          transition={{ duration: duration ?? 0.3, ease: "easeOut" }}
         >
           <stop offset="0%" stopColor="white" />
           <stop offset="100%" stopColor="black" />
         </motion.radialGradient>
+
         <mask id="textMask">
           <rect
             x="0"
@@ -79,24 +74,27 @@ export const TextHoverEffect = ({
           />
         </mask>
       </defs>
+
+      {/* Background faded text */}
       <text
         x="50%"
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
-        strokeWidth="0.3"
-        className="fill-transparent stroke-neutral-500 font-[helvetica] text-4xl font-bold dark:stroke-neutral-800"
+        className="fill-transparent stroke-neutral-500 font-[helvetica] text-9xl font-bold dark:stroke-neutral-800"
         style={{ opacity: hovered ? 0.7 : 0 }}
       >
         {text}
       </text>
+
+      {/* Animated stroke text */}
       <motion.text
         x="50%"
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
-        className="fill-transparent stroke-neutral-500 font-[helvetica] text-4xl font-bold dark:stroke-neutral-800"
+        className="fill-transparent stroke-neutral-500 font-[helvetica] text-9xl font-bold dark:stroke-neutral-800"
         initial={{ strokeDashoffset: 1000, strokeDasharray: 1000 }}
         animate={{
           strokeDashoffset: 0,
@@ -109,6 +107,8 @@ export const TextHoverEffect = ({
       >
         {text}
       </motion.text>
+
+      {/* Gradient mask text */}
       <text
         x="50%"
         y="50%"
@@ -117,7 +117,7 @@ export const TextHoverEffect = ({
         stroke="url(#textGradient)"
         strokeWidth="0.3"
         mask="url(#textMask)"
-        className="fill-transparent font-[helvetica] text-4xl font-bold"
+        className="fill-transparent font-[helvetica] text-9xl font-bold"
       >
         {text}
       </text>
