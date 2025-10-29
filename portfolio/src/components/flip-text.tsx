@@ -2,14 +2,14 @@ import React from "react";
 import { FlipWords } from "@/components/ui/flip-words";
  
 export function FlipWordsDemo() {
-  const words = ["better", "cute", "beautiful", "modern"];
- 
+  const words = ["AI/ML", "WebDev", "Cloud"]
   return (
     <div className="flex justify-center items-center px-4">
       <div className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
-        Build
+        Experienced in
         <FlipWords words={words} /> <br />
-        websites with Aceternity UI
+        A fresher with a passion for turning ideas <br>
+        </br>into intelligent applications
       </div>
     </div>
   );
