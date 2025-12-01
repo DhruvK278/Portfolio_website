@@ -5,20 +5,20 @@ import { motion } from "motion/react";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A modern shopping experience built with Next.js and Stripe.",
+    title: "Drive Guardian",
+    description: "Automatic Breaking Assistant built with yolov5 and lane detection",
     tags: ["Next.js", "TypeScript", "Stripe"],
     gradient: "from-blue-500 to-cyan-500",
   },
   {
-    title: "AI Dashboard",
-    description: "Real-time analytics dashboard powered by machine learning.",
+    title: "Arogya - Remote physiotherapy",
+    description: "A remote physiotherapy device built via esp32 and imu sensor with integrated AI for everyday progress",
     tags: ["React", "Python", "TensorFlow"],
     gradient: "from-purple-500 to-pink-500",
   },
   {
-    title: "Social Network",
-    description: "Connect with friends and share your moments instantly.",
+    title: "Virtual-Tryon",
+    description: "Try clothes virtually using comfyUI diffusion model",
     tags: ["Vue", "Firebase", "Tailwind"],
     gradient: "from-orange-500 to-red-500",
   },
