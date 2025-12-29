@@ -121,19 +121,29 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+    background-image: linear-gradient(to bottom, oklch(0 0 0 / 0.8), oklch(0 0 0 / 0.8)), url('/doodle-background.png');
+    background-repeat: repeat;
+    background-size: 500px;
+    background-attachment: fixed;
   }
+
   ::-webkit-scrollbar {
     width: 10px;
   }
+
   ::-webkit-scrollbar-track {
     background: transparent;
   }
+
   ::-webkit-scrollbar-thumb {
-    background: #27272a; /* Blackish (Zinc-800) */
+    background: #27272a;
+    /* Blackish (Zinc-800) */
     border-radius: 5px;
   }
+
   ::-webkit-scrollbar-thumb:hover {
     background: white;
   }

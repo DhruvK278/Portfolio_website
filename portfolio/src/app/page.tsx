@@ -4,7 +4,7 @@ import { Projects } from "@/components/projects";
 
 export default function Home() {
   return (
-    <main className="h-screen w-full snap-y snap-mandatory overflow-y-scroll bg-black">
+    <main className="h-screen w-full snap-y snap-mandatory overflow-y-scroll bg-transparent">
       <section className="flex h-screen w-full snap-start flex-col items-center justify-center">
         <TextHoverEffectDemo />
         <FlipWordsDemo />

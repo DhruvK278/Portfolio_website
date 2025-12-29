@@ -32,7 +32,7 @@ const projects = [
 
 export function Projects() {
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-center bg-black p-8">
+    <div className="flex min-h-screen w-full flex-col items-center justify-center p-8">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -55,12 +55,12 @@ export function Projects() {
             <div
               className={`absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gradient-to-br ${project.gradient} opacity-20 blur-2xl transition-all duration-500 group-hover:scale-150 group-hover:opacity-30`}
             />
-            
+
             <h3 className="mb-2 text-2xl font-semibold text-white">
               {project.title}
             </h3>
             <p className="mb-4 text-gray-400">{project.description}</p>
-            
+
             <div className="flex flex-wrap gap-2">
               {project.tags.map((tag, tagIndex) => (
                 <span
