@@ -16,12 +16,12 @@ export default function NavbarDemo() {
   // 🔗 TODO: Customize your navigation links here
   const navItems = [
     {
-      name: "Projects",
-      link: "#projects",
-    },
-    {
       name: "About",
       link: "#about",
+    },
+    {
+      name: "Projects",
+      link: "#projects",
     },
     {
       name: "Contact",
