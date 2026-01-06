@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 const techStack = {
     "Languages & Databases": ["Python", "Java", "MySQL", "C++", "C"],
     Frameworks: ["TensorFlow", "NumPy", "OpenCV", "NextJs", "ReactJs"],
-    "Other Tools": ["AWS", "Linux", "Git", "Unity", "GitHub"],
+    "Other Tools": ["AWS", "Linux", "Git", "Unity", "GitHub", "Docker"],
 };
 
 const experiences = [
