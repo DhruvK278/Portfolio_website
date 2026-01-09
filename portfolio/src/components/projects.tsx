@@ -7,25 +7,25 @@ const projects = [
   {
     title: "Drive Guardian",
     description: "Automatic Breaking Assistant built with yolov5 and lane detection",
-    tags: ["Next.js", "TypeScript", "Stripe"],
+    tags: ["React", "Yolov5", "python"],
     gradient: "from-blue-500 to-cyan-500",
   },
   {
     title: "Arogya - Remote physiotherapy",
     description: "A remote physiotherapy device built via esp32 and imu sensor with integrated AI for everyday progress",
-    tags: ["React", "Python", "TensorFlow"],
+    tags: ["Next.js", "ESP32", "Unity", "Node.js", "LLM"],
     gradient: "from-purple-500 to-pink-500",
   },
   {
     title: "Virtual-Tryon",
     description: "Try clothes virtually using comfyUI diffusion model",
-    tags: ["Vue", "Firebase", "Tailwind"],
+    tags: ["Next.js", "ComfyUI", "AWS"],
     gradient: "from-orange-500 to-red-500",
   },
   {
-    title: "Finance Tracker",
-    description: "Manage your personal finances with intuitive charts.",
-    tags: ["Angular", "D3.js", "Node.js"],
+    title: "SeekJob-AI",
+    description: "An autonomous AI placement agent that discovers and evaluates job opportunities using intelligent reasoning",
+    tags: ["n8n", "docker", "Kubernetes"],
     gradient: "from-emerald-500 to-teal-500",
   },
 ];

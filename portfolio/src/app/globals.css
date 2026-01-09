@@ -130,6 +130,10 @@
     background-attachment: fixed;
   }
 
+  html {
+    scroll-snap-type: y mandatory;
+  }
+
   ::-webkit-scrollbar {
     width: 10px;
   }

@@ -39,7 +39,7 @@ export default function NavbarDemo() {
           <div className="flex items-center gap-4">
             {/* 🔧 TODO: Customize your call-to-action buttons here */}
             <NavbarButton
-              href="https://github.com/your-username"
+              href="https://github.com/DhruvK278"
               target="_blank"
               variant="secondary"
             >

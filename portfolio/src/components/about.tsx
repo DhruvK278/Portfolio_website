@@ -2,6 +2,13 @@
 
 import React from "react";
 import { motion } from "motion/react";
+import {
+    IconBrandGithub,
+    IconBrandLeetcode,
+    IconBrandLinkedin,
+    IconBrandX,
+    IconFileText,
+} from "@tabler/icons-react";
 
 const techStack = {
     "Languages & Databases": ["Python", "Java", "MySQL", "C++", "C"],
@@ -41,6 +48,34 @@ const experiences = [
     },
 ];
 
+const socialLinks = [
+    {
+        label: "LinkedIn",
+        href: "https://linkedin.com/in/dhruvk27",
+        icon: IconBrandLinkedin,
+    },
+    {
+        label: "GitHub",
+        href: "https://github.com/DhruvK278",
+        icon: IconBrandGithub,
+    },
+    {
+        label: "X",
+        href: "https://x.com/DhruvK278",
+        icon: IconBrandX,
+    },
+    {
+        label: "LeetCode",
+        href: "https://leetcode.com/dhruvk27",
+        icon: IconBrandLeetcode,
+    },
+    {
+        label: "Resume",
+        href: "https://drive.google.com/file/d/172K5MBVk_6WEVo3MW4kaNkQMElXyaNem/view?usp=sharing",
+        icon: IconFileText,
+    },
+];
+
 export function About() {
     return (
         <div className="flex min-h-screen w-full flex-col items-center justify-center p-8 text-white">
@@ -60,7 +95,7 @@ export function About() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                     viewport={{ once: true }}
-                    className="col-span-1 flex items-start justify-center"
+                    className="col-span-1 flex flex-col items-center gap-8"
                 >
                     <div className="relative h-96 w-full max-w-sm overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-2 backdrop-blur-sm transition-colors hover:bg-white/10 lg:h-[600px]">
                         <img
@@ -68,6 +103,24 @@ export function About() {
                             alt="Profile"
                             className="h-full w-full rounded-xl object-cover grayscale transition-all duration-500 hover:grayscale-0"
                         />
+                    </div>
+
+                    {/* Social Links */}
+                    <div className="flex w-full max-w-sm flex-wrap justify-center gap-4">
+                        {socialLinks.map((link, index) => (
+                            <a
+                                key={index}
+                                href={link.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group relative flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-neutral-400 backdrop-blur-sm transition-all hover:border-white/20 hover:bg-white/10 hover:text-white"
+                            >
+                                <link.icon className="h-6 w-6 transition-transform group-hover:scale-110" />
+                                <span className="absolute -top-10 left-1/2 -translate-x-1/2 rounded-md bg-neutral-900 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100">
+                                    {link.label}
+                                </span>
+                            </a>
+                        ))}
                     </div>
                 </motion.div>
 
@@ -156,6 +209,8 @@ export function About() {
                             ))}
                         </div>
                     </motion.div>
+
+
                 </div>
             </div>
         </div>
