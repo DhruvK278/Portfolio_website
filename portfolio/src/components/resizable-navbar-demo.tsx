@@ -37,14 +37,7 @@ export default function NavbarDemo() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            {/* 🔧 TODO: Customize your call-to-action buttons here */}
-            <NavbarButton
-              href="https://github.com/DhruvK278"
-              target="_blank"
-              variant="secondary"
-            >
-              GitHub
-            </NavbarButton>
+
             <NavbarButton
               href="#contact"
               variant="primary"
