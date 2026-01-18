@@ -62,7 +62,7 @@ export const Contact = () => {
                         className="flex flex-col justify-center gap-6"
                     >
                         <div>
-                            <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent md:text-6xl">
+                            <h2 className="text-4xl font-bold bg-gradient-to-r from-neutral-100 to-neutral-600 bg-clip-text text-transparent md:text-6xl">
                                 Let's Connect
                             </h2>
                             <p className="mt-4 text-base text-neutral-300 md:text-lg">
@@ -107,7 +107,7 @@ export const Contact = () => {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="relative rounded-2xl border border-neutral-800 bg-neutral-900/50 p-8 backdrop-blur-md"
                     >
-                        <div className="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-purple-500/10 via-transparent to-pink-500/10 opacity-50" />
+                        <div className="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-neutral-500/10 via-transparent to-neutral-900/10 opacity-50" />
 
                         <form ref={formRef} onSubmit={sendEmail} className="flex flex-col gap-6">
                             <div className="flex flex-col gap-2">
@@ -120,7 +120,7 @@ export const Contact = () => {
                                     id="user_name"
                                     required
                                     placeholder="John Doe"
-                                    className="rounded-lg border border-neutral-700 bg-neutral-800/50 px-4 py-3 text-neutral-200 placeholder-neutral-500 focus:border-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500 transition-all"
+                                    className="rounded-lg border border-neutral-700 bg-neutral-800/50 px-4 py-3 text-neutral-200 placeholder-neutral-500 focus:border-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 transition-all"
                                 />
                             </div>
 
@@ -134,7 +134,7 @@ export const Contact = () => {
                                     id="user_email"
                                     required
                                     placeholder="john@example.com"
-                                    className="rounded-lg border border-neutral-700 bg-neutral-800/50 px-4 py-3 text-neutral-200 placeholder-neutral-500 focus:border-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500 transition-all"
+                                    className="rounded-lg border border-neutral-700 bg-neutral-800/50 px-4 py-3 text-neutral-200 placeholder-neutral-500 focus:border-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 transition-all"
                                 />
                             </div>
 
@@ -148,7 +148,7 @@ export const Contact = () => {
                                     required
                                     rows={4}
                                     placeholder="Your message here..."
-                                    className="resize-none rounded-lg border border-neutral-700 bg-neutral-800/50 px-4 py-3 text-neutral-200 placeholder-neutral-500 focus:border-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500 transition-all"
+                                    className="resize-none rounded-lg border border-neutral-700 bg-neutral-800/50 px-4 py-3 text-neutral-200 placeholder-neutral-500 focus:border-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 transition-all"
                                 />
                             </div>
 
@@ -156,7 +156,7 @@ export const Contact = () => {
                                 type="submit"
                                 disabled={loading}
                                 className={cn(
-                                    "group relative flex w-full items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-purple-600 to-pink-600 px-4 py-3 font-medium text-white transition-all hover:from-purple-500 hover:to-pink-500 disabled:cursor-not-allowed disabled:opacity-70",
+                                    "group relative flex w-full items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-neutral-200 to-neutral-600 px-4 py-3 font-medium text-black transition-all hover:from-neutral-100 hover:to-neutral-500 disabled:cursor-not-allowed disabled:opacity-70",
                                     loading && "cursor-wait"
                                 )}
                             >

@@ -71,16 +71,6 @@ export default function NavbarDemo() {
               </a>
             ))}
             <div className="flex w-full flex-col gap-4">
-              {/* 🔧 TODO: Customize mobile buttons */}
-              <NavbarButton
-                href="https://github.com/your-username"
-                target="_blank"
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="secondary" // Matched to desktop
-                className="w-full"
-              >
-                GitHub
-              </NavbarButton>
               <NavbarButton
                 href="#contact"
                 onClick={() => setIsMobileMenuOpen(false)}
