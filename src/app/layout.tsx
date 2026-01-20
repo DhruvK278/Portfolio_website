@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NavbarDemo from "@/components/resizable-navbar-demo"; // Import the navbar
+import { CustomCursor } from "@/components/ui/custom-cursor";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <CustomCursor />
         <NavbarDemo />
         {children}
       </body>
