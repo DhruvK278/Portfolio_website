@@ -62,10 +62,10 @@ export const Contact = () => {
                         className="flex flex-col justify-center gap-6"
                     >
                         <div>
-                            <h2 className="text-4xl font-bold bg-gradient-to-r from-neutral-100 to-neutral-600 bg-clip-text text-transparent md:text-6xl">
+                            <h2 className="text-4xl font-bold bg-neutral-900 bg-clip-text text-transparent dark:bg-gradient-to-r dark:from-neutral-100 dark:to-neutral-600 md:text-6xl text-neutral-900 dark:text-transparent">
                                 Let's Connect
                             </h2>
-                            <p className="mt-4 text-base text-neutral-300 md:text-lg">
+                            <p className="mt-4 text-base text-neutral-800 dark:text-neutral-300 md:text-lg">
                                 I am available to connect for new opportunities or just a friendly chat.
                                 Feel free to reach out!
                             </p>
@@ -73,29 +73,29 @@ export const Contact = () => {
 
                         <div className="flex flex-col gap-4">
                             <div className="flex items-center gap-3">
-                                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-800/50 backdrop-blur-sm border border-neutral-700">
-                                    <IconMail className="h-5 w-5 text-neutral-300" />
+                                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-200 dark:bg-neutral-800/50 backdrop-blur-sm border border-neutral-300 dark:border-neutral-700">
+                                    <IconMail className="h-5 w-5 text-neutral-700 dark:text-neutral-300" />
                                 </div>
-                                <span className="text-neutral-300">dhruv.kumar2782@gmail.com</span>
+                                <span className="text-neutral-800 dark:text-neutral-300">dhruv.kumar2782@gmail.com</span>
                             </div>
                             <div className="flex items-center gap-3">
-                                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-800/50 backdrop-blur-sm border border-neutral-700">
-                                    <IconPhone className="h-5 w-5 text-neutral-300" />
+                                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-200 dark:bg-neutral-800/50 backdrop-blur-sm border border-neutral-300 dark:border-neutral-700">
+                                    <IconPhone className="h-5 w-5 text-neutral-700 dark:text-neutral-300" />
                                 </div>
-                                <span className="text-neutral-300">+91 9205014317</span>
+                                <span className="text-neutral-800 dark:text-neutral-300">+91 9205014317</span>
                             </div>
                         </div>
 
                         <div className="flex gap-4 pt-4">
                             {/* Social Placeholders - Replace URLs with actual links or reuse existing social component if preferred */}
-                            <a href="#" className="p-2 rounded-full bg-neutral-800/50 hover:bg-neutral-700 transition-colors border border-neutral-700">
-                                <IconBrandLinkedin className="h-6 w-6 text-white" />
+                            <a href="#" className="p-2 rounded-full bg-neutral-200 dark:bg-neutral-800/50 hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-colors border border-neutral-300 dark:border-neutral-700">
+                                <IconBrandLinkedin className="h-6 w-6 text-neutral-800 dark:text-white" />
                             </a>
-                            <a href="#" className="p-2 rounded-full bg-neutral-800/50 hover:bg-neutral-700 transition-colors border border-neutral-700">
-                                <IconBrandGithub className="h-6 w-6 text-white" />
+                            <a href="#" className="p-2 rounded-full bg-neutral-200 dark:bg-neutral-800/50 hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-colors border border-neutral-300 dark:border-neutral-700">
+                                <IconBrandGithub className="h-6 w-6 text-neutral-800 dark:text-white" />
                             </a>
-                            <a href="#" className="p-2 rounded-full bg-neutral-800/50 hover:bg-neutral-700 transition-colors border border-neutral-700">
-                                <IconBrandX className="h-6 w-6 text-white" />
+                            <a href="#" className="p-2 rounded-full bg-neutral-200 dark:bg-neutral-800/50 hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-colors border border-neutral-300 dark:border-neutral-700">
+                                <IconBrandX className="h-6 w-6 text-neutral-800 dark:text-white" />
                             </a>
                         </div>
                     </motion.div>
@@ -105,13 +105,13 @@ export const Contact = () => {
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="relative rounded-2xl border border-neutral-800 bg-neutral-900/50 p-8 backdrop-blur-md"
+                        className="relative rounded-2xl border border-neutral-300 bg-neutral-50 dark:border-white/10 dark:bg-black/20 p-8 backdrop-blur-md"
                     >
-                        <div className="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-neutral-500/10 via-transparent to-neutral-900/10 opacity-50" />
+                        <div className="absolute inset-0 -z-10 rounded-2xl bg-neutral-100 dark:bg-transparent opacity-50" />
 
                         <form ref={formRef} onSubmit={sendEmail} className="flex flex-col gap-6">
                             <div className="flex flex-col gap-2">
-                                <label htmlFor="user_name" className="text-sm font-medium text-neutral-300">
+                                <label htmlFor="user_name" className="text-sm font-medium text-neutral-800 dark:text-neutral-300">
                                     Name
                                 </label>
                                 <input
@@ -120,12 +120,12 @@ export const Contact = () => {
                                     id="user_name"
                                     required
                                     placeholder="John Doe"
-                                    className="rounded-lg border border-neutral-700 bg-neutral-800/50 px-4 py-3 text-neutral-200 placeholder-neutral-500 focus:border-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 transition-all"
+                                    className="rounded-lg border border-neutral-300 bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800/50 px-4 py-3 text-neutral-900 dark:text-neutral-200 placeholder-neutral-500 focus:border-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 transition-all"
                                 />
                             </div>
 
                             <div className="flex flex-col gap-2">
-                                <label htmlFor="user_email" className="text-sm font-medium text-neutral-300">
+                                <label htmlFor="user_email" className="text-sm font-medium text-neutral-800 dark:text-neutral-300">
                                     Email
                                 </label>
                                 <input
@@ -134,12 +134,12 @@ export const Contact = () => {
                                     id="user_email"
                                     required
                                     placeholder="john@example.com"
-                                    className="rounded-lg border border-neutral-700 bg-neutral-800/50 px-4 py-3 text-neutral-200 placeholder-neutral-500 focus:border-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 transition-all"
+                                    className="rounded-lg border border-neutral-300 bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800/50 px-4 py-3 text-neutral-900 dark:text-neutral-200 placeholder-neutral-500 focus:border-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 transition-all"
                                 />
                             </div>
 
                             <div className="flex flex-col gap-2">
-                                <label htmlFor="message" className="text-sm font-medium text-neutral-300">
+                                <label htmlFor="message" className="text-sm font-medium text-neutral-800 dark:text-neutral-300">
                                     Message
                                 </label>
                                 <textarea
@@ -148,7 +148,7 @@ export const Contact = () => {
                                     required
                                     rows={4}
                                     placeholder="Your message here..."
-                                    className="resize-none rounded-lg border border-neutral-700 bg-neutral-800/50 px-4 py-3 text-neutral-200 placeholder-neutral-500 focus:border-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 transition-all"
+                                    className="resize-none rounded-lg border border-neutral-300 bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800/50 px-4 py-3 text-neutral-900 dark:text-neutral-200 placeholder-neutral-500 focus:border-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 transition-all"
                                 />
                             </div>
 

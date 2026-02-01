@@ -33,7 +33,7 @@ export function Projects() {
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="mb-12 text-4xl font-bold text-white md:text-6xl"
+        className="mb-12 text-4xl font-bold text-black dark:text-white md:text-6xl"
       >
         My Projects
       </motion.h2>
@@ -46,12 +46,12 @@ export function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/10 hover:shadow-2xl hover:shadow-white/5"
+            className="group relative overflow-hidden rounded-2xl border border-neutral-300 bg-neutral-50 dark:border-white/10 dark:bg-white/5 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-neutral-400 dark:hover:border-white/20 hover:bg-neutral-100 dark:hover:bg-white/10 hover:shadow-2xl hover:shadow-neutral-500/10 dark:hover:shadow-white/5"
           >
-            <h3 className="mb-2 font-sans text-2xl font-bold text-zinc-100 tracking-tight">
+            <h3 className="mb-2 font-sans text-2xl font-bold text-black dark:text-zinc-100 tracking-tight">
               {project.title}
             </h3>
-            <p className="mb-6 font-sans text-zinc-400 leading-relaxed">
+            <p className="mb-6 font-sans text-neutral-800 dark:text-zinc-400 leading-relaxed">
               {project.description}
             </p>
 
@@ -59,7 +59,7 @@ export function Projects() {
               {project.tags.map((tag, tagIndex) => (
                 <span
                   key={tagIndex}
-                  className="rounded-full border border-white/5 bg-white/5 px-3 py-1 font-sans text-xs font-medium text-zinc-300 transition-colors group-hover:bg-white/10"
+                  className="rounded-full border border-neutral-200 bg-neutral-200 dark:border-white/5 dark:bg-white/5 px-3 py-1 font-sans text-xs font-medium text-black dark:text-zinc-300 transition-colors group-hover:bg-neutral-300 dark:group-hover:bg-white/10"
                 >
                   {tag}
                 </span>

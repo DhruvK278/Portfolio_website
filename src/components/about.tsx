@@ -78,7 +78,7 @@ const socialLinks = [
 
 export function About() {
     return (
-        <div className="flex min-h-screen w-full flex-col items-center justify-center p-8 text-white">
+        <div className="flex min-h-screen w-full flex-col items-center justify-center p-8 text-neutral-900 dark:text-white">
             <motion.h2
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -97,7 +97,7 @@ export function About() {
                     viewport={{ once: true }}
                     className="col-span-1 flex flex-col items-center gap-8"
                 >
-                    <div className="relative h-96 w-full max-w-sm overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-2 backdrop-blur-sm transition-colors hover:bg-white/10 lg:h-[600px]">
+                    <div className="relative h-96 w-full max-w-sm overflow-hidden rounded-2xl border border-neutral-200 bg-white/50 dark:border-white/10 dark:bg-white/5 p-2 backdrop-blur-sm transition-colors hover:bg-white/80 dark:hover:bg-white/10 lg:h-[600px]">
                         <img
                             src="/assets/me.png"
                             alt="Profile"
@@ -113,7 +113,7 @@ export function About() {
                                 href={link.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group relative flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-neutral-400 backdrop-blur-sm transition-all hover:border-white/20 hover:bg-white/10 hover:text-white"
+                                className="group relative flex h-12 w-12 items-center justify-center rounded-xl border border-neutral-200 bg-white/50 dark:border-white/10 dark:bg-white/5 text-neutral-600 dark:text-neutral-400 backdrop-blur-sm transition-all hover:border-neutral-300 dark:hover:border-white/20 hover:bg-white dark:hover:bg-white/10 hover:text-black dark:hover:text-white"
                             >
                                 <link.icon className="h-6 w-6 transition-transform group-hover:scale-110" />
                                 <span className="absolute -top-10 left-1/2 -translate-x-1/2 rounded-md bg-neutral-900 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100">
@@ -134,23 +134,23 @@ export function About() {
                         viewport={{ once: true }}
                         className="space-y-6"
                     >
-                        <h3 className="text-2xl font-semibold text-neutral-200">
+                        <h3 className="text-2xl font-semibold text-neutral-800 dark:text-neutral-200">
                             Tech Stack
                         </h3>
                         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                             {Object.entries(techStack).map(([category, items], index) => (
                                 <div
                                     key={category}
-                                    className="rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-colors hover:bg-white/10"
+                                    className="rounded-xl border border-neutral-300 bg-neutral-50 dark:border-white/10 dark:bg-white/5 p-4 backdrop-blur-sm transition-colors hover:bg-neutral-100 dark:hover:bg-white/10"
                                 >
-                                    <h4 className="mb-3 text-lg font-medium text-blue-400">
+                                    <h4 className="mb-3 text-lg font-medium text-black dark:text-blue-400">
                                         {category}
                                     </h4>
                                     <div className="flex flex-wrap gap-2">
                                         {items.map((item) => (
                                             <span
                                                 key={item}
-                                                className="rounded-full bg-white/10 px-3 py-1 text-sm text-neutral-300"
+                                                className="rounded-full bg-neutral-200 dark:bg-white/10 px-3 py-1 text-sm text-black dark:text-neutral-300"
                                             >
                                                 {item}
                                             </span>
@@ -169,26 +169,26 @@ export function About() {
                         viewport={{ once: true }}
                         className="space-y-6"
                     >
-                        <h3 className="text-2xl font-semibold text-neutral-200">
+                        <h3 className="text-2xl font-semibold text-neutral-800 dark:text-neutral-200">
                             Experience
                         </h3>
                         <div className="space-y-6">
                             {experiences.map((exp, index) => (
                                 <div
                                     key={index}
-                                    className="relative rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-colors hover:bg-white/10"
+                                    className="relative rounded-xl border border-neutral-300 bg-neutral-50 dark:border-white/10 dark:bg-white/5 p-6 backdrop-blur-sm transition-colors hover:bg-neutral-100 dark:hover:bg-white/10"
                                 >
-                                    <div className="mb-4 border-b border-white/10 pb-4">
-                                        <h4 className="text-lg font-bold text-white">
+                                    <div className="mb-4 border-b border-neutral-300 dark:border-white/10 pb-4">
+                                        <h4 className="text-lg font-bold text-black dark:text-white">
                                             {exp.company}
                                         </h4>
-                                        <div className="flex flex-wrap justify-between gap-2 text-sm text-neutral-400">
+                                        <div className="flex flex-wrap justify-between gap-2 text-sm text-neutral-800 dark:text-neutral-400">
                                             <span className="font-medium text-emerald-400">
                                                 {exp.role}
                                             </span>
                                             <span>{exp.period}</span>
                                         </div>
-                                        <p className="mt-1 text-xs text-neutral-500">
+                                        <p className="mt-1 text-xs text-neutral-600 dark:text-neutral-500">
                                             {exp.location}
                                         </p>
                                     </div>
@@ -196,10 +196,10 @@ export function About() {
                                     <div className="space-y-3">
                                         {exp.details.map((detail, i) => (
                                             <div key={i}>
-                                                <span className="text-sm font-semibold text-neutral-300">
+                                                <span className="text-sm font-semibold text-black dark:text-neutral-300">
                                                     {detail.label}:{" "}
                                                 </span>
-                                                <span className="text-sm text-neutral-400">
+                                                <span className="text-sm text-neutral-800 dark:text-neutral-400">
                                                     {detail.value}
                                                 </span>
                                             </div>
@@ -209,8 +209,6 @@ export function About() {
                             ))}
                         </div>
                     </motion.div>
-
-
                 </div>
             </div>
         </div>

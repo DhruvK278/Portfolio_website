@@ -1,13 +1,14 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { IconMenu2, IconX } from "@tabler/icons-react";
+import { IconMenu2, IconX, IconSun, IconMoon } from "@tabler/icons-react";
 import {
   motion,
   AnimatePresence,
   useScroll,
   useMotionValueEvent,
 } from "motion/react";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -90,7 +91,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
       }}
       className={cn(
         "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
-        visible && "bg-black",
+        visible && "bg-white dark:bg-black",
         className,
       )}
     >
@@ -112,7 +113,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         <a
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
-          className="relative px-4 py-2 text-neutral-100 dark:text-neutral-100 hover:text-neutral-800"
+          className="relative px-4 py-2 text-neutral-600 dark:text-neutral-100 hover:text-neutral-800 dark:hover:text-neutral-200"
           key={`link-${idx}`}
           href={item.link}
         >
@@ -153,7 +154,7 @@ export const MobileNav = ({
       }}
       className={cn(
         "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-2 lg:hidden",
-        visible && "bg-black",
+        visible && "bg-white dark:bg-black",
         className,
       )}
     >
@@ -219,7 +220,7 @@ export const NavbarLogo = () => {
       href="#"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
-      <span className="text-xl font-bold text-white dark:text-white">DK</span>
+      <span className="text-xl font-bold text-black dark:text-white">DK</span>
     </a>
   );
 };
@@ -258,5 +259,29 @@ export const NavbarButton = ({
     >
       {children}
     </Tag>
+  );
+};
+
+export const ThemeToggle = () => {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
+  return (
+    <button
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      className="relative rounded-full p-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+    >
+      <span className="sr-only">Toggle theme</span>
+      <IconSun className="h-5 w-5 text-neutral-600 dark:hidden" />
+      <IconMoon className="hidden h-5 w-5 text-neutral-300 dark:block" />
+    </button>
   );
 };

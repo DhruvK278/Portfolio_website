@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavbarDemo from "@/components/resizable-navbar-demo"; // Import the navbar
 import { CustomCursor } from "@/components/ui/custom-cursor";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +20,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <CustomCursor />
-        <NavbarDemo />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <CustomCursor />
+          <NavbarDemo />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

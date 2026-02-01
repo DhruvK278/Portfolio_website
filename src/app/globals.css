@@ -50,8 +50,9 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(0 0 0);
+  --background: oklch(1 0 0);
   --foreground: oklch(0 0 0);
+  --bg-overlay: oklch(1 0 0 / 0.8);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -85,7 +86,8 @@
 
 .dark {
   --background: oklch(0 0 0);
-  --foreground: oklch(0 0 0);
+  --foreground: oklch(0.985 0 0);
+  --bg-overlay: oklch(0 0 0 / 0.8);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
@@ -124,7 +126,7 @@
 
   body {
     @apply bg-background text-foreground;
-    background-image: linear-gradient(to bottom, oklch(0 0 0 / 0.8), oklch(0 0 0 / 0.8)), url('/doodle-background.png');
+    background-image: linear-gradient(to bottom, var(--bg-overlay), var(--bg-overlay)), url('/doodle-background.png');
     background-repeat: repeat;
     background-size: 500px;
     background-attachment: fixed;
