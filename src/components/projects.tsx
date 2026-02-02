@@ -8,21 +8,25 @@ const projects = [
     title: "Drive Guardian",
     description: "Automatic Breaking Assistant built with yolov5 and lane detection",
     tags: ["React", "Yolov5", "python"],
+    link: "https://github.com/rohan-pandeyy/drive-guardian",
   },
   {
     title: "Arogya - Remote physiotherapy",
     description: "A remote physiotherapy device built via esp32 and imu sensor with integrated AI for everyday progress",
     tags: ["Next.js", "ESP32", "Unity", "Node.js", "LLM"],
+    link: "https://github.com/rohan-pandeyy/Arogya",
   },
   {
     title: "Virtual-Tryon",
     description: "Try clothes virtually using comfyUI diffusion model",
     tags: ["Next.js", "ComfyUI", "AWS"],
+    link: "https://github.com/DhruvK278/Ai-Virtual-tryon",
   },
   {
     title: "SeekJob-AI",
     description: "An autonomous AI placement agent that discovers and evaluates job opportunities using intelligent reasoning",
     tags: ["n8n", "docker", "Kubernetes"],
+    link: "https://github.com/DhruvK278/SeekJob-AI",
   },
 ];
 
@@ -54,6 +58,17 @@ export function Projects() {
             <p className="mb-6 font-sans text-neutral-800 dark:text-zinc-400 leading-relaxed">
               {project.description}
             </p>
+
+            <div className="mb-6">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-full bg-black dark:bg-zinc-100 px-4 py-2 text-sm font-medium text-white dark:text-black transition-transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
+              >
+                View Project
+              </a>
+            </div>
 
             <div className="flex flex-wrap gap-2">
               {project.tags.map((tag, tagIndex) => (
