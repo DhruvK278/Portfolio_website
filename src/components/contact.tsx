@@ -18,7 +18,6 @@ export const Contact = () => {
 
         if (!formRef.current) return;
 
-        // Use environment variables for EmailJS
         const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
         const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
         const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
@@ -87,7 +86,6 @@ export const Contact = () => {
                         </div>
 
                         <div className="flex gap-4 pt-4">
-                            {/* Social Placeholders - Replace URLs with actual links or reuse existing social component if preferred */}
                             <a href="#" className="p-2 rounded-full bg-neutral-200 dark:bg-neutral-800/50 hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-colors border border-neutral-300 dark:border-neutral-700">
                                 <IconBrandLinkedin className="h-6 w-6 text-neutral-800 dark:text-white" />
                             </a>

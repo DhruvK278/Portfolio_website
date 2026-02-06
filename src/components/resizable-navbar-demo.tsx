@@ -15,7 +15,6 @@ import {
 import { useState } from "react";
 
 export default function NavbarDemo() {
-  // 🔗 TODO: Customize your navigation links here
   const navItems = [
     {
       name: "About",

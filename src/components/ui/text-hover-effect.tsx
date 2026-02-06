@@ -75,7 +75,6 @@ export const TextHoverEffect = ({
         </mask>
       </defs>
 
-      {/* Background faded text */}
       <text
         x="50%"
         y="50%"
@@ -87,7 +86,6 @@ export const TextHoverEffect = ({
         {text}
       </text>
 
-      {/* Animated stroke text */}
       <motion.text
         x="50%"
         y="50%"
@@ -108,7 +106,6 @@ export const TextHoverEffect = ({
         {text}
       </motion.text>
 
-      {/* Gradient mask text */}
       <text
         x="50%"
         y="50%"
