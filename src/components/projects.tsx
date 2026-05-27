@@ -17,16 +17,18 @@ const projects = [
     link: "https://github.com/rohan-pandeyy/Arogya",
   },
   {
-    title: "Virtual-Tryon",
-    description: "Try clothes virtually using comfyUI diffusion model",
-    tags: ["Next.js", "ComfyUI", "AWS"],
-    link: "https://github.com/DhruvK278/Ai-Virtual-tryon",
+    title: "VaastraTrendz",
+    description:
+      "Premium AI-powered fashion e-commerce platform with intelligent customer support and modern full-stack architecture.",
+    tags: ["Next.js", "React", "Node.js", "PostgreSQL", "Vercel"],
+    link: "https://github.com/DhruvK278/VaastraTrendz",
   },
   {
-    title: "SeekJob-AI",
-    description: "An autonomous AI placement agent that discovers and evaluates job opportunities using intelligent reasoning",
-    tags: ["n8n", "docker", "Kubernetes"],
-    link: "https://github.com/DhruvK278/SeekJob-AI",
+    title: "ICU Patient Deterioration Prediction",
+    description:
+      "Edge-Fog-Cloud ML system that predicts ICU patient deterioration 6–12 hours in advance.",
+    tags: ["Python", "MLflow", "AWS", "Streamlit",],
+    link: "https://github.com/DhruvK278/ICU-Deterioration",
   },
 ];
 
