@@ -71,7 +71,7 @@ const socialLinks = [
     },
     {
         label: "Resume",
-        href: "https://drive.google.com/file/d/1ESe-ano4AKDBnagnTfw1rMxorQzt4KKU/view?usp=sharing",
+        href: "https://drive.google.com/file/d/1SQMZbYd3kjy20ehh71gDsiV9PccsRl02/view?usp=sharing",
         icon: IconFileText,
     },
 ];
